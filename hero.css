@@ -1,0 +1,29 @@
+/* Cleaner, more restrained first-screen styling */
+.brandmark{background:#2f9df4;color:#fff;border-radius:10px}
+.hero{min-height:100vh;background:#0a1622;color:#fff;padding:145px 0 88px;position:relative;overflow:hidden}
+.hero:after{display:none}
+.hero-grid{grid-template-columns:1.08fr .82fr;gap:78px;align-items:center}
+.availability{display:flex;align-items:center;gap:12px;color:#9fb2c5;font-size:.88rem;font-weight:700;letter-spacing:.02em}
+.availability:before{content:"";width:34px;height:2px;background:#2f9df4;display:block}
+.pulse{display:none}
+.hero h1{font:800 clamp(3.25rem,6vw,5.8rem)/.98 Manrope,sans-serif;letter-spacing:-.055em;margin:22px 0 24px;max-width:780px;color:#fff}
+.hero h1 span{background:none;-webkit-background-clip:initial;color:inherit}
+.hero-copy{font-size:1.08rem;line-height:1.75;color:#aebdcb;max-width:670px}
+.hero-copy strong{color:#fff}
+.actions{margin:30px 0 26px}
+.btn-primary{background:#2f9df4;color:#fff;border:1px solid #2f9df4;box-shadow:none}
+.btn-primary:hover{background:#268bd9}
+.btn-ghost{background:transparent;border-color:#34475a;color:#dce5ed}
+.hero-note{gap:10px 24px;color:#7f93a7;font-size:.88rem}
+.visual{min-height:520px;display:flex;justify-content:flex-end;align-items:center}
+.portrait-shell{width:min(360px,92%);aspect-ratio:.84;border-radius:22px;padding:0;background:#111f2d;border:1px solid #2b3b4b;box-shadow:0 24px 55px rgba(0,0,0,.24);transform:none;overflow:hidden;transition:.25s}
+.portrait-shell:hover{transform:translateY(-3px)}
+.portrait{width:100%;height:100%;object-fit:cover;border-radius:0;background:#111f2d}
+.float-card{display:none}
+.profile-caption{margin-top:14px;text-align:right;color:#8799aa;font-size:.86rem}
+.profile-caption strong{display:block;color:#e8eef4;font:700 .95rem Manrope}
+.ticker{background:#0d1b28;border-top:1px solid #213140;border-bottom:1px solid #213140;color:#9cafc1}
+.ticker-track{width:min(var(--max),calc(100% - 40px));margin:auto;display:flex;justify-content:space-between;gap:24px;padding:14px 0;min-width:0;animation:none;font-weight:600;font-size:.86rem;color:#9cafc1;overflow:hidden}
+.ticker-track span:before{display:none}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:34px}.visual{min-height:430px;justify-content:center}.profile-caption{text-align:center}.ticker-track{justify-content:flex-start;overflow-x:auto;white-space:nowrap;scrollbar-width:none}.ticker-track::-webkit-scrollbar{display:none}}
+@media(max-width:620px){.hero{padding-top:128px}.hero h1{font-size:clamp(3rem,14vw,4.45rem)}.visual{min-height:390px}.portrait-shell{width:min(330px,88%)}}
