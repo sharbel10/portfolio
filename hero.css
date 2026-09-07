@@ -16,9 +16,9 @@
 .btn-ghost{background:transparent;border-color:#34475a;color:#dce5ed}
 .hero-note{gap:10px 24px;color:#7f93a7;font-size:.88rem}
 .visual{min-height:520px;display:flex;justify-content:flex-end;align-items:center}
-.portrait-shell{width:min(360px,92%);aspect-ratio:.84;border-radius:22px;padding:0;background:#111f2d;border:1px solid #2b3b4b;box-shadow:0 24px 55px rgba(0,0,0,.24);transform:none;overflow:hidden;transition:.25s}
+.portrait-shell{width:min(360px,92%);aspect-ratio:.84;border-radius:22px;padding:0;background:#111f2d url('profile.jpg') center 32%/cover no-repeat;border:1px solid #2b3b4b;box-shadow:0 24px 55px rgba(0,0,0,.24);transform:none;overflow:hidden;transition:.25s}
 .portrait-shell:hover{transform:translateY(-3px)}
-.portrait{width:100%;height:100%;object-fit:cover;border-radius:0;background:#111f2d}
+.portrait{width:100%;height:100%;object-fit:cover;border-radius:0;background:#111f2d;opacity:0}
 .float-card{display:none}
 .profile-caption{margin-top:14px;text-align:right;color:#8799aa;font-size:.86rem}
 .profile-caption strong{display:block;color:#e8eef4;font:700 .95rem Manrope}
