@@ -94,10 +94,12 @@
       <div class="reveal"><div class="eyebrow">Personal projects</div><h2>Projects that show how I think and build.</h2><p class="lead">A selection of work covering architecture, booking flows, payments, integrations, notifications, maps, localization, AI-powered features, and production-style state management.</p></div>
       <div class="project-grid project-grid-unified">
         <article class="project-card reveal lumina-card">
-          <button class="project-cover" type="button" id="openLuminaGallery" aria-label="Open Lumina screenshots">
-            <img src="images/lumina-home.webp" alt="Lumina home screen" loading="lazy">
-            <span class="cover-action">View screenshots <b>↗</b></span>
-          </button>
+          <div class="shots-preview">
+            <button class="shot" type="button" data-shot="0" aria-label="Open Lumina login screen"><img src="images/lumina-login.webp" alt="Lumina login screen" loading="lazy" decoding="async"></button>
+            <button class="shot" type="button" data-shot="1" aria-label="Open Lumina home screen"><img src="images/lumina-home.webp" alt="Lumina home screen" loading="lazy" decoding="async"></button>
+            <button class="shot" type="button" data-shot="2" aria-label="Open Lumina clinics screen"><img src="images/lumina-clinics.webp" alt="Lumina clinics screen" loading="lazy" decoding="async"></button>
+            <button class="shot shot-more" type="button" id="openLuminaGallery" aria-label="View all Lumina screenshots"><img src="images/lumina-ai.webp" alt="" aria-hidden="true" loading="lazy" decoding="async"><span><b>+1</b>View more</span></button>
+          </div>
           <div class="project-icon i0">LU</div>
           <h3>Lumina</h3>
           <p>A full Flutter beauty and wellness booking application with nearby discovery, advanced search and filtering, appointment booking and rescheduling, favorites, reviews, bilingual support, AI-powered service recommendations from text or images, Stripe deposits, Firebase notifications, geolocation, and automated testing.</p>
@@ -119,13 +121,15 @@
   <button class="gallery-close" type="button" id="closeLuminaGallery" aria-label="Close gallery">×</button>
   <button class="gallery-nav gallery-prev" type="button" id="luminaPrev" aria-label="Previous screenshot">‹</button>
   <div class="gallery-dialog">
-    <div class="gallery-main"><img id="luminaGalleryImage" src="images/lumina-home.webp" alt="Lumina screenshot"></div>
-    <div class="gallery-caption"><strong>Lumina</strong><span id="luminaCounter">1 / 3</span></div>
-    <div class="gallery-thumbs">
-      <button type="button" class="active" data-gallery-index="0"><img src="images/lumina-home.webp" alt="Home screen thumbnail"></button>
-      <button type="button" data-gallery-index="1"><img src="images/lumina-ai.webp" alt="AI scan thumbnail"></button>
-      <button type="button" data-gallery-index="2"><img src="images/lumina-clinics.webp" alt="Clinics screen thumbnail"></button>
+    <div class="gallery-head"><div><strong>Lumina</strong><span>App screenshots</span></div><button class="gallery-back" type="button" id="luminaBack">‹ All screenshots</button></div>
+    <div class="gallery-grid" id="luminaGrid">
+      <button type="button" data-gallery-index="0"><img src="images/lumina-login.webp" alt="Lumina login screen" loading="lazy"><span>Login</span></button>
+      <button type="button" data-gallery-index="1"><img src="images/lumina-home.webp" alt="Lumina home screen" loading="lazy"><span>Home</span></button>
+      <button type="button" data-gallery-index="2"><img src="images/lumina-clinics.webp" alt="Lumina clinics screen" loading="lazy"><span>Clinics</span></button>
+      <button type="button" data-gallery-index="3"><img src="images/lumina-ai.webp" alt="Lumina AI face scan screen" loading="lazy"><span>AI Scan</span></button>
     </div>
+    <div class="gallery-main"><img id="luminaGalleryImage" src="images/lumina-login.webp" alt="Lumina screenshot"></div>
+    <div class="gallery-caption"><strong id="luminaTitle">Login</strong><span id="luminaCounter">1 / 4</span></div>
   </div>
   <button class="gallery-nav gallery-next" type="button" id="luminaNext" aria-label="Next screenshot">›</button>
 </div>
@@ -136,11 +140,15 @@ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entr
 const menu=document.getElementById('menu'),navlinks=document.getElementById('navlinks');menu.addEventListener('click',()=>{const open=navlinks.classList.toggle('open');menu.textContent=open?'×':'☰'});navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navlinks.classList.remove('open');menu.textContent='☰'}));
 const sections=[...document.querySelectorAll('main section[id]')],links=[...document.querySelectorAll('.navlinks a[href^="#"]')];function setActive(){let current='home';const y=scrollY+180;sections.forEach(s=>{if(s.offsetTop<=y)current=s.id});links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current))}addEventListener('scroll',setActive,{passive:true});setActive();document.getElementById('year').textContent=new Date().getFullYear();
 
-const luminaImages=['images/lumina-home.webp','images/lumina-ai.webp','images/lumina-clinics.webp'];let luminaIndex=0;const gallery=document.getElementById('luminaGallery'),galleryImage=document.getElementById('luminaGalleryImage'),counter=document.getElementById('luminaCounter'),thumbs=[...document.querySelectorAll('[data-gallery-index]')];
-function showLuminaImage(index){luminaIndex=(index+luminaImages.length)%luminaImages.length;galleryImage.src=luminaImages[luminaIndex];counter.textContent=`${luminaIndex+1} / ${luminaImages.length}`;thumbs.forEach((b,i)=>b.classList.toggle('active',i===luminaIndex))}
-function openLuminaGallery(){showLuminaImage(0);gallery.classList.add('open');gallery.setAttribute('aria-hidden','false');document.body.classList.add('modal-open')}
-function closeLuminaGallery(){gallery.classList.remove('open');gallery.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open')}
-document.getElementById('openLuminaGallery').addEventListener('click',openLuminaGallery);document.getElementById('openLuminaGalleryLink').addEventListener('click',openLuminaGallery);document.getElementById('closeLuminaGallery').addEventListener('click',closeLuminaGallery);document.getElementById('luminaPrev').addEventListener('click',()=>showLuminaImage(luminaIndex-1));document.getElementById('luminaNext').addEventListener('click',()=>showLuminaImage(luminaIndex+1));thumbs.forEach(b=>b.addEventListener('click',()=>showLuminaImage(Number(b.dataset.galleryIndex))));gallery.addEventListener('click',e=>{if(e.target===gallery)closeLuminaGallery()});addEventListener('keydown',e=>{if(!gallery.classList.contains('open'))return;if(e.key==='Escape')closeLuminaGallery();if(e.key==='ArrowLeft')showLuminaImage(luminaIndex-1);if(e.key==='ArrowRight')showLuminaImage(luminaIndex+1)});
+const luminaImages=[{src:'images/lumina-login.webp',title:'Login'},{src:'images/lumina-home.webp',title:'Home'},{src:'images/lumina-clinics.webp',title:'Clinics'},{src:'images/lumina-ai.webp',title:'AI Scan'}];let luminaIndex=0;
+const gallery=document.getElementById('luminaGallery'),galleryImage=document.getElementById('luminaGalleryImage'),counter=document.getElementById('luminaCounter'),galleryTitle=document.getElementById('luminaTitle'),gridButtons=[...document.querySelectorAll('#luminaGrid [data-gallery-index]')];
+function showLuminaImage(index){luminaIndex=(index+luminaImages.length)%luminaImages.length;const item=luminaImages[luminaIndex];galleryImage.src=item.src;galleryImage.alt=`Lumina ${item.title} screen`;galleryTitle.textContent=item.title;counter.textContent=`${luminaIndex+1} / ${luminaImages.length}`;gallery.classList.add('viewing')}
+function showLuminaGrid(){gallery.classList.remove('viewing')}
+function openLuminaGallery(index){gallery.classList.add('open');gallery.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');if(typeof index==='number')showLuminaImage(index);else showLuminaGrid()}
+function closeLuminaGallery(){gallery.classList.remove('open','viewing');gallery.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open')}
+document.getElementById('openLuminaGallery').addEventListener('click',()=>openLuminaGallery());document.getElementById('openLuminaGalleryLink').addEventListener('click',()=>openLuminaGallery());document.querySelectorAll('.shot[data-shot]').forEach(b=>b.addEventListener('click',()=>openLuminaGallery(Number(b.dataset.shot))));
+document.getElementById('closeLuminaGallery').addEventListener('click',closeLuminaGallery);document.getElementById('luminaBack').addEventListener('click',showLuminaGrid);document.getElementById('luminaPrev').addEventListener('click',()=>showLuminaImage(luminaIndex-1));document.getElementById('luminaNext').addEventListener('click',()=>showLuminaImage(luminaIndex+1));gridButtons.forEach(b=>b.addEventListener('click',()=>showLuminaImage(Number(b.dataset.galleryIndex))));
+gallery.addEventListener('click',e=>{if(e.target===gallery)closeLuminaGallery()});addEventListener('keydown',e=>{if(!gallery.classList.contains('open'))return;if(e.key==='Escape'){gallery.classList.contains('viewing')?showLuminaGrid():closeLuminaGallery();return}if(!gallery.classList.contains('viewing'))return;if(e.key==='ArrowLeft')showLuminaImage(luminaIndex-1);if(e.key==='ArrowRight')showLuminaImage(luminaIndex+1)});
 </script>
 </body>
 </html>
