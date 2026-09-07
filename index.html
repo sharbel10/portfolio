@@ -39,12 +39,7 @@
         </div>
         <div class="hero-note"><span>Damascus, Syria</span><span>sharbelmh.10@gmail.com</span></div>
       </div>
-
-      <div class="visual reveal">
-        <div class="portrait-shell">
-          <img class="portrait" id="profilePhoto" src="profile-sharbel.webp" alt="Sharbel ALMohana" width="260" height="347" decoding="async" fetchpriority="high">
-        </div>
-      </div>
+      <div class="visual reveal"><div class="portrait-shell"><img class="portrait" id="profilePhoto" src="profile-sharbel.webp" alt="Sharbel ALMohana" width="260" height="347" decoding="async" fetchpriority="high"></div></div>
     </div>
   </section>
 
@@ -98,51 +93,54 @@
     <div class="wrap">
       <div class="reveal"><div class="eyebrow">Personal projects</div><h2>Projects that show how I think and build.</h2><p class="lead">A selection of work covering architecture, booking flows, payments, integrations, notifications, maps, localization, AI-powered features, and production-style state management.</p></div>
       <div class="project-grid project-grid-unified">
-        <article class="project-card reveal">
+        <article class="project-card reveal lumina-card">
+          <button class="project-cover" type="button" id="openLuminaGallery" aria-label="Open Lumina screenshots">
+            <img src="images/lumina-home.webp" alt="Lumina home screen" loading="lazy">
+            <span class="cover-action">View screenshots <b>↗</b></span>
+          </button>
           <div class="project-icon i0">LU</div>
           <h3>Lumina</h3>
           <p>A full Flutter beauty and wellness booking application with nearby discovery, advanced search and filtering, appointment booking and rescheduling, favorites, reviews, bilingual support, AI-powered service recommendations from text or images, Stripe deposits, Firebase notifications, geolocation, and automated testing.</p>
-          <div class="project-media project-screens" aria-label="Lumina app screenshots">
-            <img src="lumina-home-v2.svg" alt="Lumina home and nearby clinics screen" loading="lazy">
-            <img src="lumina-ai-screen.svg" alt="Lumina AI scan screen" loading="lazy">
-            <img src="lumina-clinics-v2.svg" alt="Lumina all clinics screen" loading="lazy">
-          </div>
           <div class="tags"><span class="tag">Flutter</span><span class="tag">BLoC / Cubit</span><span class="tag">Dio</span><span class="tag">GetIt / Injectable</span><span class="tag">GoRouter</span><span class="tag">Firebase</span><span class="tag">Stripe</span><span class="tag">AI Integration</span><span class="tag">Testing</span></div>
-          <div class="project-actions"><a href="https://github.com/sharbel10/beauty-center-app" target="_blank" rel="noopener noreferrer">Explore Lumina on GitHub ↗</a><a class="gallery-link" href="https://drive.google.com/drive/folders/1Y5CocEql2ZvzV2UCd2DVi4cVp89vb3FR?usp=sharing" target="_blank" rel="noopener noreferrer">View Gallery ↗</a></div>
+          <div class="project-actions"><a href="https://github.com/sharbel10/beauty-center-app" target="_blank" rel="noopener noreferrer">Explore Lumina on GitHub ↗</a><button class="gallery-button" type="button" id="openLuminaGalleryLink">View Gallery ↗</button></div>
         </article>
 
-        <article class="project-card reveal">
-          <div class="project-icon i1">SP</div>
-          <h3>Sportify</h3>
-          <p>Multi-role stadium booking app for players and stadium owners with discovery, reservations, leagues, teams, maps, deep linking, and structured API-driven flows.</p>
-          <div class="tags"><span class="tag">Flutter</span><span class="tag">BLoC</span><span class="tag">Clean Architecture</span><span class="tag">Dio</span><span class="tag">Freezed</span></div>
-          <div class="project-actions"><a href="https://github.com/sharbel10/Reserving_Stadiums_App" target="_blank" rel="noopener noreferrer">View project ↗</a><a class="gallery-link" href="https://drive.google.com/drive/folders/1Y5CocEql2ZvzV2UCd2DVi4cVp89vb3FR?usp=sharing" target="_blank" rel="noopener noreferrer">View Gallery ↗</a></div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-icon i2">GC</div>
-          <h3>Government Complaints</h3>
-          <p>Citizen complaint submission and tracking with document handling, secure storage, status updates, and push notifications.</p>
-          <div class="tags"><span class="tag">Flutter</span><span class="tag">GetX</span><span class="tag">Dio</span><span class="tag">Firebase Messaging</span></div>
-          <div class="project-actions"><a href="https://github.com/sharbel10/goverment_complaint" target="_blank" rel="noopener noreferrer">View project ↗</a><a class="gallery-link" href="https://drive.google.com/drive/folders/1Y5CocEql2ZvzV2UCd2DVi4cVp89vb3FR?usp=sharing" target="_blank" rel="noopener noreferrer">View Gallery ↗</a></div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-icon i3">TR</div>
-          <h3>Tourism Booking</h3>
-          <p>Travel booking app for hotels, flights, and packages with search, filters, reservations, ratings, reviews, and galleries.</p>
-          <div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">BLoC</span><span class="tag">Dio</span></div>
-          <div class="project-actions"><a href="https://github.com/sharbel10/Tourism_project" target="_blank" rel="noopener noreferrer">View project ↗</a><a class="gallery-link" href="https://drive.google.com/drive/folders/1Y5CocEql2ZvzV2UCd2DVi4cVp89vb3FR?usp=sharing" target="_blank" rel="noopener noreferrer">View Gallery ↗</a></div>
-        </article>
+        <article class="project-card reveal"><div class="project-icon i1">SP</div><h3>Sportify</h3><p>Multi-role stadium booking app for players and stadium owners with discovery, reservations, leagues, teams, maps, deep linking, and structured API-driven flows.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">BLoC</span><span class="tag">Clean Architecture</span><span class="tag">Dio</span><span class="tag">Freezed</span></div><div class="project-actions"><a href="https://github.com/sharbel10/Reserving_Stadiums_App" target="_blank" rel="noopener noreferrer">View project ↗</a><a class="gallery-link" href="https://drive.google.com/drive/folders/1Y5CocEql2ZvzV2UCd2DVi4cVp89vb3FR?usp=sharing" target="_blank" rel="noopener noreferrer">View Gallery ↗</a></div></article>
+        <article class="project-card reveal"><div class="project-icon i2">GC</div><h3>Government Complaints</h3><p>Citizen complaint submission and tracking with document handling, secure storage, status updates, and push notifications.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">GetX</span><span class="tag">Dio</span><span class="tag">Firebase Messaging</span></div><div class="project-actions"><a href="https://github.com/sharbel10/goverment_complaint" target="_blank" rel="noopener noreferrer">View project ↗</a><a class="gallery-link" href="https://drive.google.com/drive/folders/1Y5CocEql2ZvzV2UCd2DVi4cVp89vb3FR?usp=sharing" target="_blank" rel="noopener noreferrer">View Gallery ↗</a></div></article>
+        <article class="project-card reveal"><div class="project-icon i3">TR</div><h3>Tourism Booking</h3><p>Travel booking app for hotels, flights, and packages with search, filters, reservations, ratings, reviews, and galleries.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">BLoC</span><span class="tag">Dio</span></div><div class="project-actions"><a href="https://github.com/sharbel10/Tourism_project" target="_blank" rel="noopener noreferrer">View project ↗</a><a class="gallery-link" href="https://drive.google.com/drive/folders/1Y5CocEql2ZvzV2UCd2DVi4cVp89vb3FR?usp=sharing" target="_blank" rel="noopener noreferrer">View Gallery ↗</a></div></article>
       </div>
     </div>
   </section>
 
   <section class="section" id="contact"><div class="wrap"><div class="contact-panel reveal"><div><div class="eyebrow" style="color:#55ddff">Contact</div><h2>Let’s build dependable software.</h2><p>Open to software engineering and mobile development opportunities, collaboration, and product-focused work.</p></div><div class="contact-actions"><a class="btn btn-primary" href="mailto:sharbelmh.10@gmail.com">Email me</a><a class="btn btn-ghost" href="https://www.linkedin.com/in/sharbel-al-mhanna-a473a7305" target="_blank">LinkedIn</a><a class="btn btn-ghost" href="https://github.com/sharbel10" target="_blank">GitHub</a></div></div></div></section>
 </main>
+
+<div class="gallery-modal" id="luminaGallery" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Lumina screenshots">
+  <button class="gallery-close" type="button" id="closeLuminaGallery" aria-label="Close gallery">×</button>
+  <button class="gallery-nav gallery-prev" type="button" id="luminaPrev" aria-label="Previous screenshot">‹</button>
+  <div class="gallery-dialog">
+    <div class="gallery-main"><img id="luminaGalleryImage" src="images/lumina-home.webp" alt="Lumina screenshot"></div>
+    <div class="gallery-caption"><strong>Lumina</strong><span id="luminaCounter">1 / 3</span></div>
+    <div class="gallery-thumbs">
+      <button type="button" class="active" data-gallery-index="0"><img src="images/lumina-home.webp" alt="Home screen thumbnail"></button>
+      <button type="button" data-gallery-index="1"><img src="images/lumina-ai.webp" alt="AI scan thumbnail"></button>
+      <button type="button" data-gallery-index="2"><img src="images/lumina-clinics.webp" alt="Clinics screen thumbnail"></button>
+    </div>
+  </div>
+  <button class="gallery-nav gallery-next" type="button" id="luminaNext" aria-label="Next screenshot">›</button>
+</div>
+
 <footer><div class="wrap foot"><span>© <span id="year"></span> Sharbel ALMohana</span><span>Software Engineering · Mobile Applications</span></div></footer>
 <script>
-const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in');observer.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));const menu=document.getElementById('menu'),navlinks=document.getElementById('navlinks');menu.addEventListener('click',()=>{const open=navlinks.classList.toggle('open');menu.textContent=open?'×':'☰'});navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navlinks.classList.remove('open');menu.textContent='☰'}));const sections=[...document.querySelectorAll('main section[id]')],links=[...document.querySelectorAll('.navlinks a[href^="#"]')];function setActive(){let current='home';const y=scrollY+180;sections.forEach(s=>{if(s.offsetTop<=y)current=s.id});links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current))}addEventListener('scroll',setActive,{passive:true});setActive();document.getElementById('year').textContent=new Date().getFullYear();
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in');observer.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const menu=document.getElementById('menu'),navlinks=document.getElementById('navlinks');menu.addEventListener('click',()=>{const open=navlinks.classList.toggle('open');menu.textContent=open?'×':'☰'});navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navlinks.classList.remove('open');menu.textContent='☰'}));
+const sections=[...document.querySelectorAll('main section[id]')],links=[...document.querySelectorAll('.navlinks a[href^="#"]')];function setActive(){let current='home';const y=scrollY+180;sections.forEach(s=>{if(s.offsetTop<=y)current=s.id});links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current))}addEventListener('scroll',setActive,{passive:true});setActive();document.getElementById('year').textContent=new Date().getFullYear();
+
+const luminaImages=['images/lumina-home.webp','images/lumina-ai.webp','images/lumina-clinics.webp'];let luminaIndex=0;const gallery=document.getElementById('luminaGallery'),galleryImage=document.getElementById('luminaGalleryImage'),counter=document.getElementById('luminaCounter'),thumbs=[...document.querySelectorAll('[data-gallery-index]')];
+function showLuminaImage(index){luminaIndex=(index+luminaImages.length)%luminaImages.length;galleryImage.src=luminaImages[luminaIndex];counter.textContent=`${luminaIndex+1} / ${luminaImages.length}`;thumbs.forEach((b,i)=>b.classList.toggle('active',i===luminaIndex))}
+function openLuminaGallery(){showLuminaImage(0);gallery.classList.add('open');gallery.setAttribute('aria-hidden','false');document.body.classList.add('modal-open')}
+function closeLuminaGallery(){gallery.classList.remove('open');gallery.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open')}
+document.getElementById('openLuminaGallery').addEventListener('click',openLuminaGallery);document.getElementById('openLuminaGalleryLink').addEventListener('click',openLuminaGallery);document.getElementById('closeLuminaGallery').addEventListener('click',closeLuminaGallery);document.getElementById('luminaPrev').addEventListener('click',()=>showLuminaImage(luminaIndex-1));document.getElementById('luminaNext').addEventListener('click',()=>showLuminaImage(luminaIndex+1));thumbs.forEach(b=>b.addEventListener('click',()=>showLuminaImage(Number(b.dataset.galleryIndex))));gallery.addEventListener('click',e=>{if(e.target===gallery)closeLuminaGallery()});addEventListener('keydown',e=>{if(!gallery.classList.contains('open'))return;if(e.key==='Escape')closeLuminaGallery();if(e.key==='ArrowLeft')showLuminaImage(luminaIndex-1);if(e.key==='ArrowRight')showLuminaImage(luminaIndex+1)});
 </script>
 </body>
 </html>
