@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1b2d"/><stop offset="1" stop-color="#102b49"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#35c8ff" stop-opacity=".26"/><stop offset="1" stop-color="#35c8ff" stop-opacity="0"/></radialGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#000" flood-opacity=".55"/></filter>
+    <clipPath id="c1"><rect x="98" y="108" width="205" height="455" rx="31"/></clipPath>
+    <clipPath id="c2"><rect x="350" y="57" width="220" height="515" rx="34"/></clipPath>
+    <clipPath id="c3"><rect x="612" y="108" width="205" height="455" rx="31"/></clipPath>
+  </defs>
+  <rect width="900" height="650" rx="42" fill="url(#bg)"/>
+  <circle cx="450" cy="315" r="300" fill="url(#glow)"/>
+  <g opacity=".35"><path d="M65 580H835" stroke="#58ddff" stroke-opacity=".25"/><path d="M65 80H835" stroke="#58ddff" stroke-opacity=".12"/></g>
+  <g filter="url(#shadow)" transform="rotate(-7 200 335)">
+    <rect x="85" y="92" width="232" height="489" rx="42" fill="#eaf1f7"/>
+    <rect x="94" y="101" width="214" height="471" rx="35" fill="#071321"/>
+    <image href="lumina-home-screen.svg" x="98" y="108" width="205" height="455" preserveAspectRatio="xMidYMid slice" clip-path="url(#c1)"/>
+    <rect x="161" y="102" width="80" height="9" rx="4.5" fill="#071321"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="336" y="40" width="248" height="548" rx="45" fill="#f4f7fa"/>
+    <rect x="345" y="49" width="230" height="530" rx="38" fill="#071321"/>
+    <image href="lumina-ai-screen.svg" x="350" y="57" width="220" height="515" preserveAspectRatio="xMidYMid slice" clip-path="url(#c2)"/>
+    <rect x="420" y="50" width="80" height="9" rx="4.5" fill="#071321"/>
+  </g>
+  <g filter="url(#shadow)" transform="rotate(7 715 335)">
+    <rect x="598" y="92" width="232" height="489" rx="42" fill="#eaf1f7"/>
+    <rect x="607" y="101" width="214" height="471" rx="35" fill="#071321"/>
+    <image href="lumina-clinics-screen.svg" x="612" y="108" width="205" height="455" preserveAspectRatio="xMidYMid slice" clip-path="url(#c3)"/>
+    <rect x="675" y="102" width="80" height="9" rx="4.5" fill="#071321"/>
+  </g>
+</svg>
