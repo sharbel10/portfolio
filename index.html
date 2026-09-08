@@ -93,21 +93,23 @@
     <div class="wrap">
       <div class="reveal"><div class="eyebrow">Personal projects</div><h2>Projects that show how I think and build.</h2><p class="lead">A selection of work covering architecture, booking flows, payments, integrations, notifications, maps, localization, AI-powered features, and production-style state management.</p></div>
       <div class="project-grid project-grid-unified">
-        <article class="project-card reveal lumina-card">
-          <div class="shots-preview">
-            <button class="shot" type="button" data-shot="0" aria-label="Open Lumina login screen"><img src="images/lumina-login.webp" alt="Lumina login screen" loading="lazy" decoding="async"></button>
-            <button class="shot" type="button" data-shot="1" aria-label="Open Lumina home screen"><img src="images/lumina-home.webp" alt="Lumina home screen" loading="lazy" decoding="async"></button>
-            <button class="shot" type="button" data-shot="2" aria-label="Open Lumina clinics screen"><img src="images/lumina-clinics.webp" alt="Lumina clinics screen" loading="lazy" decoding="async"></button>
-            <button class="shot shot-more" type="button" id="openLuminaGallery" aria-label="View all Lumina screenshots"><img src="images/lumina-ai.webp" alt="" aria-hidden="true" loading="lazy" decoding="async"><span><b>+8</b>View more</span></button>
-          </div>
+        <article class="project-card reveal gallery-card" data-gallery="lumina">
           <div class="project-icon i0">LU</div>
           <h3>Lumina</h3>
           <p>A full Flutter beauty and wellness booking application with nearby discovery, advanced search and filtering, appointment booking and rescheduling, favorites, reviews, bilingual support, AI-powered service recommendations from text or images, Stripe deposits, Firebase notifications, geolocation, and automated testing.</p>
+          <div class="shots-preview" data-gallery-preview="lumina"></div>
           <div class="tags"><span class="tag">Flutter</span><span class="tag">BLoC / Cubit</span><span class="tag">Dio</span><span class="tag">GetIt / Injectable</span><span class="tag">GoRouter</span><span class="tag">Firebase</span><span class="tag">Stripe</span><span class="tag">AI Integration</span><span class="tag">Testing</span></div>
-          <div class="project-actions"><a href="https://github.com/sharbel10/beauty-center-app" target="_blank" rel="noopener noreferrer">Explore Lumina on GitHub ↗</a><button class="gallery-button" type="button" id="openLuminaGalleryLink">View Gallery ↗</button></div>
+          <div class="project-actions"><a href="https://github.com/sharbel10/beauty-center-app" target="_blank" rel="noopener noreferrer">Explore Lumina on GitHub ↗</a><button class="gallery-button" type="button" data-gallery-open="lumina">View Gallery ↗</button></div>
         </article>
 
-        <article class="project-card reveal"><div class="project-icon i1">SP</div><h3>Sportify</h3><p>Multi-role stadium booking app for players and stadium owners with discovery, reservations, leagues, teams, maps, deep linking, and structured API-driven flows.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">BLoC</span><span class="tag">Clean Architecture</span><span class="tag">Dio</span><span class="tag">Freezed</span></div><div class="project-actions"><a href="https://github.com/sharbel10/Reserving_Stadiums_App" target="_blank" rel="noopener noreferrer">View project ↗</a><a class="gallery-link" href="https://drive.google.com/drive/folders/1Y5CocEql2ZvzV2UCd2DVi4cVp89vb3FR?usp=sharing" target="_blank" rel="noopener noreferrer">View Gallery ↗</a></div></article>
+        <article class="project-card reveal gallery-card" data-gallery="sportify">
+          <div class="project-icon i1">SP</div>
+          <h3>Sportify</h3>
+          <p>Multi-role stadium booking app for players and stadium owners with discovery, reservations, leagues, teams, maps, deep linking, and structured API-driven flows.</p>
+          <div class="shots-preview" data-gallery-preview="sportify"></div>
+          <div class="tags"><span class="tag">Flutter</span><span class="tag">BLoC</span><span class="tag">Clean Architecture</span><span class="tag">Dio</span><span class="tag">Freezed</span></div>
+          <div class="project-actions"><a href="https://github.com/sharbel10/Reserving_Stadiums_App" target="_blank" rel="noopener noreferrer">View project ↗</a><button class="gallery-button" type="button" data-gallery-open="sportify">View Gallery ↗</button></div>
+        </article>
         <article class="project-card reveal"><div class="project-icon i2">GC</div><h3>Government Complaints</h3><p>Citizen complaint submission and tracking with document handling, secure storage, status updates, and push notifications.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">GetX</span><span class="tag">Dio</span><span class="tag">Firebase Messaging</span></div><div class="project-actions"><a href="https://github.com/sharbel10/goverment_complaint" target="_blank" rel="noopener noreferrer">View project ↗</a><a class="gallery-link" href="https://drive.google.com/drive/folders/1Y5CocEql2ZvzV2UCd2DVi4cVp89vb3FR?usp=sharing" target="_blank" rel="noopener noreferrer">View Gallery ↗</a></div></article>
         <article class="project-card reveal"><div class="project-icon i3">TR</div><h3>Tourism Booking</h3><p>Travel booking app for hotels, flights, and packages with search, filters, reservations, ratings, reviews, and galleries.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">BLoC</span><span class="tag">Dio</span></div><div class="project-actions"><a href="https://github.com/sharbel10/Tourism_project" target="_blank" rel="noopener noreferrer">View project ↗</a><a class="gallery-link" href="https://drive.google.com/drive/folders/1Y5CocEql2ZvzV2UCd2DVi4cVp89vb3FR?usp=sharing" target="_blank" rel="noopener noreferrer">View Gallery ↗</a></div></article>
       </div>
@@ -117,28 +119,16 @@
   <section class="section" id="contact"><div class="wrap"><div class="contact-panel reveal"><div><div class="eyebrow" style="color:#55ddff">Contact</div><h2>Let’s build dependable software.</h2><p>Open to software engineering and mobile development opportunities, collaboration, and product-focused work.</p></div><div class="contact-actions"><a class="btn btn-primary" href="mailto:sharbelmh.10@gmail.com">Email me</a><a class="btn btn-ghost" href="https://www.linkedin.com/in/sharbel-al-mhanna-a473a7305" target="_blank">LinkedIn</a><a class="btn btn-ghost" href="https://github.com/sharbel10" target="_blank">GitHub</a></div></div></div></section>
 </main>
 
-<div class="gallery-modal" id="luminaGallery" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Lumina screenshots">
-  <button class="gallery-close" type="button" id="closeLuminaGallery" aria-label="Close gallery">×</button>
-  <button class="gallery-nav gallery-prev" type="button" id="luminaPrev" aria-label="Previous screenshot">‹</button>
+<div class="gallery-modal" id="galleryModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project screenshots">
+  <button class="gallery-close" type="button" id="galleryClose" aria-label="Close gallery">×</button>
+  <button class="gallery-nav gallery-prev" type="button" id="galleryPrev" aria-label="Previous screenshot">‹</button>
   <div class="gallery-dialog">
-    <div class="gallery-head"><div><strong>Lumina</strong><span>App screenshots</span></div><button class="gallery-back" type="button" id="luminaBack">‹ All screenshots</button></div>
-    <div class="gallery-grid" id="luminaGrid">
-      <button type="button" data-gallery-index="0"><img src="images/lumina-login.webp" alt="Lumina login screen" loading="lazy"><span>Login</span></button>
-      <button type="button" data-gallery-index="1"><img src="images/lumina-home.webp" alt="Lumina home screen" loading="lazy"><span>Home</span></button>
-      <button type="button" data-gallery-index="2"><img src="images/lumina-clinics.webp" alt="Lumina clinics screen" loading="lazy"><span>Clinics</span></button>
-      <button type="button" data-gallery-index="3"><img src="images/lumina-ai.webp" alt="Lumina AI face scan screen" loading="lazy"><span>AI Scan</span></button>
-      <button type="button" data-gallery-index="4"><img src="images/lumina-ai-results.webp" alt="Lumina AI results screen" loading="lazy"><span>AI Results</span></button>
-      <button type="button" data-gallery-index="5"><img src="images/lumina-clinic-overview.webp" alt="Lumina clinic overview screen" loading="lazy"><span>Clinic Overview</span></button>
-      <button type="button" data-gallery-index="6"><img src="images/lumina-clinic-gallery.webp" alt="Lumina clinic gallery screen" loading="lazy"><span>Clinic Gallery</span></button>
-      <button type="button" data-gallery-index="7"><img src="images/lumina-clinic-info.webp" alt="Lumina clinic info screen" loading="lazy"><span>Clinic Info</span></button>
-      <button type="button" data-gallery-index="8"><img src="images/lumina-book-service.webp" alt="Lumina booking: select service" loading="lazy"><span>Booking · Service</span></button>
-      <button type="button" data-gallery-index="9"><img src="images/lumina-book-time.webp" alt="Lumina booking: select time" loading="lazy"><span>Booking · Time</span></button>
-      <button type="button" data-gallery-index="10"><img src="images/lumina-book-payment.webp" alt="Lumina booking: Stripe payment" loading="lazy"><span>Booking · Payment</span></button>
-    </div>
-    <div class="gallery-main"><img id="luminaGalleryImage" src="images/lumina-login.webp" alt="Lumina screenshot"></div>
-    <div class="gallery-caption"><strong id="luminaTitle">Login</strong><span id="luminaCounter">1 / 11</span></div>
+    <div class="gallery-head"><div><strong id="galleryProject">Project</strong><span id="gallerySubtitle">App screenshots</span></div><button class="gallery-back" type="button" id="galleryBack">‹ All screenshots</button></div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+    <div class="gallery-main"><img id="galleryImage" src="" alt=""></div>
+    <div class="gallery-caption"><strong id="galleryTitle"></strong><span id="galleryCounter"></span></div>
   </div>
-  <button class="gallery-nav gallery-next" type="button" id="luminaNext" aria-label="Next screenshot">›</button>
+  <button class="gallery-nav gallery-next" type="button" id="galleryNext" aria-label="Next screenshot">›</button>
 </div>
 
 <footer><div class="wrap foot"><span>© <span id="year"></span> Sharbel ALMohana</span><span>Software Engineering · Mobile Applications</span></div></footer>
@@ -147,15 +137,23 @@ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entr
 const menu=document.getElementById('menu'),navlinks=document.getElementById('navlinks');menu.addEventListener('click',()=>{const open=navlinks.classList.toggle('open');menu.textContent=open?'×':'☰'});navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navlinks.classList.remove('open');menu.textContent='☰'}));
 const sections=[...document.querySelectorAll('main section[id]')],links=[...document.querySelectorAll('.navlinks a[href^="#"]')];function setActive(){let current='home';const y=scrollY+180;sections.forEach(s=>{if(s.offsetTop<=y)current=s.id});links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current))}addEventListener('scroll',setActive,{passive:true});setActive();document.getElementById('year').textContent=new Date().getFullYear();
 
-const luminaImages=[{src:'images/lumina-login.webp',title:'Login'},{src:'images/lumina-home.webp',title:'Home'},{src:'images/lumina-clinics.webp',title:'Clinics'},{src:'images/lumina-ai.webp',title:'AI Scan'},{src:'images/lumina-ai-results.webp',title:'AI Results'},{src:'images/lumina-clinic-overview.webp',title:'Clinic Overview'},{src:'images/lumina-clinic-gallery.webp',title:'Clinic Gallery'},{src:'images/lumina-clinic-info.webp',title:'Clinic Info'},{src:'images/lumina-book-service.webp',title:'Booking · Service'},{src:'images/lumina-book-time.webp',title:'Booking · Time'},{src:'images/lumina-book-payment.webp',title:'Booking · Payment'}];let luminaIndex=0;
-const gallery=document.getElementById('luminaGallery'),galleryImage=document.getElementById('luminaGalleryImage'),counter=document.getElementById('luminaCounter'),galleryTitle=document.getElementById('luminaTitle'),gridButtons=[...document.querySelectorAll('#luminaGrid [data-gallery-index]')];
-function showLuminaImage(index){luminaIndex=(index+luminaImages.length)%luminaImages.length;const item=luminaImages[luminaIndex];galleryImage.src=item.src;galleryImage.alt=`Lumina ${item.title} screen`;galleryTitle.textContent=item.title;counter.textContent=`${luminaIndex+1} / ${luminaImages.length}`;gallery.classList.add('viewing')}
-function showLuminaGrid(){gallery.classList.remove('viewing')}
-function openLuminaGallery(index){gallery.classList.add('open');gallery.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');if(typeof index==='number')showLuminaImage(index);else showLuminaGrid()}
-function closeLuminaGallery(){gallery.classList.remove('open','viewing');gallery.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open')}
-document.getElementById('openLuminaGallery').addEventListener('click',()=>openLuminaGallery());document.getElementById('openLuminaGalleryLink').addEventListener('click',()=>openLuminaGallery());document.querySelectorAll('.shot[data-shot]').forEach(b=>b.addEventListener('click',()=>openLuminaGallery(Number(b.dataset.shot))));
-document.getElementById('closeLuminaGallery').addEventListener('click',closeLuminaGallery);document.getElementById('luminaBack').addEventListener('click',showLuminaGrid);document.getElementById('luminaPrev').addEventListener('click',()=>showLuminaImage(luminaIndex-1));document.getElementById('luminaNext').addEventListener('click',()=>showLuminaImage(luminaIndex+1));gridButtons.forEach(b=>b.addEventListener('click',()=>showLuminaImage(Number(b.dataset.galleryIndex))));
-gallery.addEventListener('click',e=>{if(e.target===gallery)closeLuminaGallery()});addEventListener('keydown',e=>{if(!gallery.classList.contains('open'))return;if(e.key==='Escape'){gallery.classList.contains('viewing')?showLuminaGrid():closeLuminaGallery();return}if(!gallery.classList.contains('viewing'))return;if(e.key==='ArrowLeft')showLuminaImage(luminaIndex-1);if(e.key==='ArrowRight')showLuminaImage(luminaIndex+1)});
+const galleries={
+  lumina:{name:'Lumina',items:[['lumina-login','Login'],['lumina-home','Home'],['lumina-clinics','Clinics'],['lumina-ai','AI Scan'],['lumina-ai-results','AI Results'],['lumina-clinic-overview','Clinic Overview'],['lumina-clinic-gallery','Clinic Gallery'],['lumina-clinic-info','Clinic Info'],['lumina-book-service','Booking · Service'],['lumina-book-time','Booking · Time'],['lumina-book-payment','Booking · Payment']]},
+  sportify:{name:'Sportify',items:[['sportify-home','Home'],['sportify-stadiums','Stadiums'],['sportify-stadium-details','Stadium Details'],['sportify-teams','Teams'],['sportify-create-team','Create Team'],['sportify-create-match','Create Match'],['sportify-league','League Details'],['sportify-owner-home','Owner Home'],['sportify-send-report','Send Report']]}
+};
+const PREVIEW_COUNT=3,gallery=document.getElementById('galleryModal'),galleryGrid=document.getElementById('galleryGrid'),galleryImage=document.getElementById('galleryImage'),galleryCounter=document.getElementById('galleryCounter'),galleryTitle=document.getElementById('galleryTitle'),galleryProject=document.getElementById('galleryProject'),gallerySubtitle=document.getElementById('gallerySubtitle');
+let activeKey=null,activeIndex=0;
+const src=id=>`images/${id}.webp`;
+function buildPreviews(){document.querySelectorAll('[data-gallery-preview]').forEach(el=>{const key=el.dataset.galleryPreview,g=galleries[key];if(!g)return;const shown=g.items.slice(0,PREVIEW_COUNT),rest=g.items.length-shown.length;el.innerHTML=shown.map(([id,title],i)=>`<button class="shot" type="button" data-gallery-open="${key}" data-shot="${i}" aria-label="Open ${g.name} ${title} screen"><img src="${src(id)}" alt="${g.name} ${title} screen" loading="lazy" decoding="async"></button>`).join('')+(rest>0?`<button class="shot shot-more" type="button" data-gallery-open="${key}" aria-label="View all ${g.name} screenshots"><img src="${src(g.items[PREVIEW_COUNT][0])}" alt="" aria-hidden="true" loading="lazy" decoding="async"><span><b>+${rest}</b>View more</span></button>`:'')})}
+function renderGrid(key){const g=galleries[key];galleryProject.textContent=g.name;gallerySubtitle.textContent=`${g.items.length} app screenshots`;galleryGrid.innerHTML=g.items.map(([id,title],i)=>`<button type="button" data-gallery-index="${i}"><img src="${src(id)}" alt="${g.name} ${title} screen" loading="lazy"><span>${title}</span></button>`).join('')}
+function showImage(index){const g=galleries[activeKey];activeIndex=(index+g.items.length)%g.items.length;const [id,title]=g.items[activeIndex];galleryImage.src=src(id);galleryImage.alt=`${g.name} ${title} screen`;galleryTitle.textContent=title;galleryCounter.textContent=`${activeIndex+1} / ${g.items.length}`;gallery.classList.add('viewing')}
+function showGrid(){gallery.classList.remove('viewing')}
+function openGallery(key,index){if(activeKey!==key){activeKey=key;renderGrid(key)}gallery.classList.add('open');gallery.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');if(typeof index==='number')showImage(index);else showGrid()}
+function closeGallery(){gallery.classList.remove('open','viewing');gallery.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open')}
+buildPreviews();
+document.addEventListener('click',e=>{const opener=e.target.closest('[data-gallery-open]');if(opener){openGallery(opener.dataset.galleryOpen,opener.dataset.shot!==undefined?Number(opener.dataset.shot):undefined);return}const cell=e.target.closest('#galleryGrid [data-gallery-index]');if(cell)showImage(Number(cell.dataset.galleryIndex))});
+document.getElementById('galleryClose').addEventListener('click',closeGallery);document.getElementById('galleryBack').addEventListener('click',showGrid);document.getElementById('galleryPrev').addEventListener('click',()=>showImage(activeIndex-1));document.getElementById('galleryNext').addEventListener('click',()=>showImage(activeIndex+1));
+gallery.addEventListener('click',e=>{if(e.target===gallery)closeGallery()});addEventListener('keydown',e=>{if(!gallery.classList.contains('open'))return;if(e.key==='Escape'){gallery.classList.contains('viewing')?showGrid():closeGallery();return}if(!gallery.classList.contains('viewing'))return;if(e.key==='ArrowLeft')showImage(activeIndex-1);if(e.key==='ArrowRight')showImage(activeIndex+1)});
 </script>
 </body>
 </html>
