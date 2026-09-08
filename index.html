@@ -111,7 +111,14 @@
           <div class="project-actions"><a href="https://github.com/sharbel10/Reserving_Stadiums_App" target="_blank" rel="noopener noreferrer">View project ↗</a><button class="gallery-button" type="button" data-gallery-open="sportify">View Gallery ↗</button></div>
         </article>
         <article class="project-card reveal"><div class="project-icon i2">GC</div><h3>Government Complaints</h3><p>Citizen complaint submission and tracking with document handling, secure storage, status updates, and push notifications.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">GetX</span><span class="tag">Dio</span><span class="tag">Firebase Messaging</span></div><div class="project-actions"><a href="https://github.com/sharbel10/goverment_complaint" target="_blank" rel="noopener noreferrer">View project ↗</a><a class="gallery-link" href="https://drive.google.com/drive/folders/1Y5CocEql2ZvzV2UCd2DVi4cVp89vb3FR?usp=sharing" target="_blank" rel="noopener noreferrer">View Gallery ↗</a></div></article>
-        <article class="project-card reveal"><div class="project-icon i3">TR</div><h3>Tourism Booking</h3><p>Travel booking app for hotels, flights, and packages with search, filters, reservations, ratings, reviews, and galleries.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">BLoC</span><span class="tag">Dio</span></div><div class="project-actions"><a href="https://github.com/sharbel10/Tourism_project" target="_blank" rel="noopener noreferrer">View project ↗</a><a class="gallery-link" href="https://drive.google.com/drive/folders/1Y5CocEql2ZvzV2UCd2DVi4cVp89vb3FR?usp=sharing" target="_blank" rel="noopener noreferrer">View Gallery ↗</a></div></article>
+        <article class="project-card reveal gallery-card" data-gallery="tourism">
+          <div class="project-icon i3">TR</div>
+          <h3>Tourism Booking</h3>
+          <p>Travel booking app for hotels, flights, and packages with search, filters, reservations, ratings, reviews, and galleries.</p>
+          <div class="shots-preview" data-gallery-preview="tourism"></div>
+          <div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">BLoC</span><span class="tag">Dio</span></div>
+          <div class="project-actions"><a href="https://github.com/sharbel10/Tourism_project" target="_blank" rel="noopener noreferrer">View project ↗</a><button class="gallery-button" type="button" data-gallery-open="tourism">View Gallery ↗</button></div>
+        </article>
       </div>
     </div>
   </section>
@@ -139,7 +146,8 @@ const sections=[...document.querySelectorAll('main section[id]')],links=[...docu
 
 const galleries={
   lumina:{name:'Lumina',items:[['lumina-login','Login'],['lumina-home','Home'],['lumina-clinics','Clinics'],['lumina-ai','AI Scan'],['lumina-ai-results','AI Results'],['lumina-clinic-overview','Clinic Overview'],['lumina-clinic-gallery','Clinic Gallery'],['lumina-clinic-info','Clinic Info'],['lumina-book-service','Booking · Service'],['lumina-book-time','Booking · Time'],['lumina-book-payment','Booking · Payment']]},
-  sportify:{name:'Sportify',items:[['sportify-home','Home'],['sportify-stadiums','Stadiums'],['sportify-stadium-details','Stadium Details'],['sportify-teams','Teams'],['sportify-create-team','Create Team'],['sportify-create-match','Create Match'],['sportify-league','League Details'],['sportify-owner-home','Owner Home'],['sportify-send-report','Send Report']]}
+  sportify:{name:'Sportify',items:[['sportify-home','Home'],['sportify-stadiums','Stadiums'],['sportify-stadium-details','Stadium Details'],['sportify-teams','Teams'],['sportify-create-team','Create Team'],['sportify-create-match','Create Match'],['sportify-league','League Details'],['sportify-owner-home','Owner Home'],['sportify-send-report','Send Report']]},
+  tourism:{name:'Tourism Booking',items:[['tourism-home','Home'],['tourism-search','Search'],['tourism-package','Package Details'],['tourism-trips','Package Trips'],['tourism-reserve','Reservation'],['tourism-transaction','Transaction Details']]}
 };
 const PREVIEW_COUNT=3,gallery=document.getElementById('galleryModal'),galleryGrid=document.getElementById('galleryGrid'),galleryImage=document.getElementById('galleryImage'),galleryCounter=document.getElementById('galleryCounter'),galleryTitle=document.getElementById('galleryTitle'),galleryProject=document.getElementById('galleryProject'),gallerySubtitle=document.getElementById('gallerySubtitle');
 let activeKey=null,activeIndex=0;
