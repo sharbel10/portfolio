@@ -117,7 +117,14 @@
           <div class="tags"><span class="tag">Flutter</span><span class="tag">State</span><span class="tag">Decorator</span><span class="tag">Composite</span><span class="tag">Observer</span><span class="tag">Facade</span><span class="tag">Chain of Responsibility</span><span class="tag">BLoC</span><span class="tag">Dependency Injection</span></div>
           <div class="project-actions"><a href="https://github.com/sharbel10/banking_system" target="_blank" rel="noopener noreferrer">Explore the architecture ↗</a></div>
         </article>
-        <article class="project-card reveal"><div class="project-icon i2">GC</div><h3>Government Complaints</h3><p>Citizen complaint submission and tracking with document handling, secure storage, status updates, and push notifications.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">GetX</span><span class="tag">Dio</span><span class="tag">Firebase Messaging</span></div><div class="project-actions"><a href="https://github.com/sharbel10/goverment_complaint" target="_blank" rel="noopener noreferrer">View project ↗</a><a class="gallery-link" href="https://drive.google.com/drive/folders/1Y5CocEql2ZvzV2UCd2DVi4cVp89vb3FR?usp=sharing" target="_blank" rel="noopener noreferrer">View Gallery ↗</a></div></article>
+        <article class="project-card reveal gallery-card" data-gallery="government">
+          <div class="project-icon i2">GC</div>
+          <h3>Government Complaints</h3>
+          <p>Citizen complaint submission and tracking with document handling, secure storage, status updates, and push notifications.</p>
+          <div class="shots-preview" data-gallery-preview="government"></div>
+          <div class="tags"><span class="tag">Flutter</span><span class="tag">GetX</span><span class="tag">Dio</span><span class="tag">Firebase Messaging</span></div>
+          <div class="project-actions"><a href="https://github.com/sharbel10/goverment_complaint" target="_blank" rel="noopener noreferrer">View project ↗</a><button class="gallery-button" type="button" data-gallery-open="government">View Gallery ↗</button></div>
+        </article>
         <article class="project-card reveal gallery-card" data-gallery="tourism">
           <div class="project-icon i3">TR</div>
           <h3>Tourism Booking</h3>
@@ -154,11 +161,12 @@ const sections=[...document.querySelectorAll('main section[id]')],links=[...docu
 const galleries={
   lumina:{name:'Lumina',items:[['lumina-login','Login'],['lumina-home','Home'],['lumina-clinics','Clinics'],['lumina-ai','AI Scan'],['lumina-ai-results','AI Results'],['lumina-clinic-overview','Clinic Overview'],['lumina-clinic-gallery','Clinic Gallery'],['lumina-clinic-info','Clinic Info'],['lumina-book-service','Booking · Service'],['lumina-book-time','Booking · Time'],['lumina-book-payment','Booking · Payment']]},
   sportify:{name:'Sportify',items:[['sportify-home','Home'],['sportify-stadiums','Stadiums'],['sportify-stadium-details','Stadium Details'],['sportify-teams','Teams'],['sportify-create-team','Create Team'],['sportify-create-match','Create Match'],['sportify-league','League Details'],['sportify-owner-home','Owner Home'],['sportify-send-report','Send Report']]},
+  government:{name:'Government Complaints',items:[['government-home.jpg','Home'],['government-submit.jpg','Submit Complaint'],['government-details.jpg','Complaint Details'],['government-login.jpg','Login'],['government-register.jpg','Create Account']]},
   tourism:{name:'Tourism Booking',items:[['tourism-home','Home'],['tourism-search','Search'],['tourism-package','Package Details'],['tourism-trips','Package Trips'],['tourism-reserve','Reservation'],['tourism-transaction','Transaction Details']]}
 };
 const PREVIEW_COUNT=3,gallery=document.getElementById('galleryModal'),galleryGrid=document.getElementById('galleryGrid'),galleryImage=document.getElementById('galleryImage'),galleryCounter=document.getElementById('galleryCounter'),galleryTitle=document.getElementById('galleryTitle'),galleryProject=document.getElementById('galleryProject'),gallerySubtitle=document.getElementById('gallerySubtitle');
 let activeKey=null,activeIndex=0;
-const src=id=>`images/${id}.webp`;
+const src=id=>`images/${id}${id.endsWith('.jpg')?'':'.webp'}`;
 function buildPreviews(){document.querySelectorAll('[data-gallery-preview]').forEach(el=>{const key=el.dataset.galleryPreview,g=galleries[key];if(!g)return;const shown=g.items.slice(0,PREVIEW_COUNT),rest=g.items.length-shown.length;el.innerHTML=shown.map(([id,title],i)=>`<button class="shot" type="button" data-gallery-open="${key}" data-shot="${i}" aria-label="Open ${g.name} ${title} screen"><img src="${src(id)}" alt="${g.name} ${title} screen" loading="lazy" decoding="async"></button>`).join('')+(rest>0?`<button class="shot shot-more" type="button" data-gallery-open="${key}" aria-label="View all ${g.name} screenshots"><img src="${src(g.items[PREVIEW_COUNT][0])}" alt="" aria-hidden="true" loading="lazy" decoding="async"><span><b>+${rest}</b>View more</span></button>`:'')})}
 function renderGrid(key){const g=galleries[key];galleryProject.textContent=g.name;gallerySubtitle.textContent=`${g.items.length} app screenshots`;galleryGrid.innerHTML=g.items.map(([id,title],i)=>`<button type="button" data-gallery-index="${i}"><img src="${src(id)}" alt="${g.name} ${title} screen" loading="lazy"><span>${title}</span></button>`).join('')}
 function showImage(index){const g=galleries[activeKey];activeIndex=(index+g.items.length)%g.items.length;const [id,title]=g.items[activeIndex];galleryImage.src=src(id);galleryImage.alt=`${g.name} ${title} screen`;galleryTitle.textContent=title;galleryCounter.textContent=`${activeIndex+1} / ${g.items.length}`;gallery.classList.add('viewing')}
