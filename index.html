@@ -110,12 +110,13 @@
           <div class="tags"><span class="tag">Flutter</span><span class="tag">BLoC</span><span class="tag">Clean Architecture</span><span class="tag">Dio</span><span class="tag">Freezed</span></div>
           <div class="project-actions"><a href="https://github.com/sharbel10/Reserving_Stadiums_App" target="_blank" rel="noopener noreferrer">View project ↗</a><button class="gallery-button" type="button" data-gallery-open="sportify">View Gallery ↗</button></div>
         </article>
-        <article class="project-card reveal">
+        <article class="project-card reveal gallery-card" data-gallery="banking">
           <div class="project-icon i2">BK</div>
           <h3>Banking System — Design Patterns Showcase</h3>
           <p>An architecture-focused Flutter banking simulation created to demonstrate practical design-pattern usage. It models account states, transaction workflows, account hierarchies, notifications, optional account capabilities, and role-based flows using local/mock data rather than a connected backend.</p>
+          <div class="shots-preview" data-gallery-preview="banking"></div>
           <div class="tags"><span class="tag">Flutter</span><span class="tag">State</span><span class="tag">Decorator</span><span class="tag">Composite</span><span class="tag">Observer</span><span class="tag">Facade</span><span class="tag">Chain of Responsibility</span><span class="tag">BLoC</span><span class="tag">Dependency Injection</span></div>
-          <div class="project-actions"><a href="https://github.com/sharbel10/banking_system" target="_blank" rel="noopener noreferrer">Explore the architecture ↗</a></div>
+          <div class="project-actions"><a href="https://github.com/sharbel10/banking_system" target="_blank" rel="noopener noreferrer">Explore the architecture ↗</a><button class="gallery-button" type="button" data-gallery-open="banking">View Gallery ↗</button></div>
         </article>
         <article class="project-card reveal gallery-card" data-gallery="government">
           <div class="project-icon i2">GC</div>
@@ -159,6 +160,7 @@ const menu=document.getElementById('menu'),navlinks=document.getElementById('nav
 const sections=[...document.querySelectorAll('main section[id]')],links=[...document.querySelectorAll('.navlinks a[href^="#"]')];function setActive(){let current='home';const y=scrollY+180;sections.forEach(s=>{if(s.offsetTop<=y)current=s.id});links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current))}addEventListener('scroll',setActive,{passive:true});setActive();document.getElementById('year').textContent=new Date().getFullYear();
 
 const galleries={
+  banking:{name:'Banking System',items:[["banking-roles", "Choose Your Role"], ["banking-staff", "Staff Dashboard"], ["banking-transaction", "New Transaction"], ["banking-scheduled", "Scheduled Payments"], ["banking-create-account", "Create Account"], ["banking-daily-report", "Daily Transactions"], ["banking-summary", "Account Summary"], ["banking-approvals", "Manager Inbox"]]},
   lumina:{name:'Lumina',items:[['lumina-login','Login'],['lumina-home','Home'],['lumina-clinics','Clinics'],['lumina-ai','AI Scan'],['lumina-ai-results','AI Results'],['lumina-clinic-overview','Clinic Overview'],['lumina-clinic-gallery','Clinic Gallery'],['lumina-clinic-info','Clinic Info'],['lumina-book-service','Booking · Service'],['lumina-book-time','Booking · Time'],['lumina-book-payment','Booking · Payment']]},
   sportify:{name:'Sportify',items:[['sportify-home','Home'],['sportify-stadiums','Stadiums'],['sportify-stadium-details','Stadium Details'],['sportify-teams','Teams'],['sportify-create-team','Create Team'],['sportify-create-match','Create Match'],['sportify-league','League Details'],['sportify-owner-home','Owner Home'],['sportify-send-report','Send Report']]},
   government:{name:'Government Complaints',items:[['government-home.jpg','Home'],['government-submit.jpg','Submit Complaint'],['government-details.jpg','Complaint Details'],['government-login.jpg','Login'],['government-register.jpg','Create Account']]},
